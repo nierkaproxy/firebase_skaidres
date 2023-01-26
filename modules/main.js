@@ -1,12 +1,8 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-
-import {
-    getDatabase,
-    set, update
-} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
-
-import { firebaseConfig } from './firebase.js';
+import { setForm } from './update_form.js'
 import { updateForm } from './update_form.js'
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+let button = document.getElementById('button');
+let update_button = document.getElementById('buttonUpdate');
+
+button.addEventListener('click', setForm);
+update_button.addEventListener('click', updateForm);
