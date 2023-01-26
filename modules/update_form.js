@@ -10,7 +10,8 @@ import { firebaseConfig } from './firebase.js';
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const setForm = () => {
+const setForm = (e) => {
+    e.preventDefault();
 
     let enterID = document.getElementById('enterID');
     let enterName = document.getElementById('enterName');
@@ -27,9 +28,12 @@ const setForm = () => {
     .catch((error) => {
         alert(error);
     });
-}
+    
+    document.querySelector('form').reset();
+};
 
-const updateForm = () => {
+const updateForm = (e) => {
+    e.preventDefault();
 
     let enterID = document.getElementById('enterID');
     let enterName = document.getElementById('enterName');
@@ -45,6 +49,7 @@ const updateForm = () => {
         .catch((error) => {
             alert(error);
         });
-}
+        document.querySelector('form').reset();
+};
 
 export { setForm, updateForm }

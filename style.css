@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 5em;
+    border: 2px solid black;
+}
+input{
+    width: 100%;
+}
+
+#button, #buttonUpdate{
+    width: 10%;
+}
+
+#button{
+    background-color: rgb(119, 201, 119);
+    box-shadow: 2px 2px 2px black;
+}
+
+#buttonUpdate{
+    background-color: rgb(77, 77, 255);
+    color: white;
+    box-shadow: 2px 2px 2px black;
+}
